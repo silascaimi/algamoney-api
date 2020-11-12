@@ -26,13 +26,18 @@
 	</properties>
 
 	<dependencies>
-		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<!-- MYSQL -->
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<version>5.1.46</version><!--$NO-MVN-MAN-VER$-->
+			<version>5.1.46</version><!-- $NO-MVN-MAN-VER$ -->
 		</dependency>
 
+		<!-- FLYWAY -->
+		<dependency>
+			<groupId>org.flywaydb</groupId>
+			<artifactId>flyway-core</artifactId>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
