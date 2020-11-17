@@ -42,10 +42,16 @@ public class CategoriaResource {
 
 		return ResponseEntity.created(uri).body(categoriaSalva);
 	}
-	
+
 	@GetMapping("/{codigo}")
-	public Categoria buscar(@PathVariable Long codigo) {
-		return categoriaRepository.findOne(codigo);
+	public ResponseEntity<Categoria> buscar(@PathVariable Long codigo) {
+		Categoria categoria = categoriaRepository.findOne(codigo);
+
+		if (categoria != null) {
+			return ResponseEntity.ok(categoria);
+		}
+
+		return ResponseEntity.notFound().build();
 	}
 
 }
